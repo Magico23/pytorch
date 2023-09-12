@@ -7,4 +7,6 @@ RUN conda install -y faiss-gpu scikit-learn pandas flake8 yapf isort yacs gdown 
 RUN pip install --upgrade pip && python -m pip install --upgrade setuptools && \
     pip install opencv-python tb-nightly matplotlib logger_tt tabulate tqdm wheel mccabe scipy
 
+RUN pip install -r requirements.txt && pip install ultralytics && pip install yolo
+
 COPY ./fonts/* /opt/conda/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/
